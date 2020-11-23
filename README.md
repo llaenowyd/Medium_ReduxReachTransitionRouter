@@ -19,10 +19,9 @@ The versions noted here in this `README.md` file and represented by
 a set of specific, named, non-master branches correspond to the stages
 of development presented in the article.
 
-### This is Version 0
+### This is Version 1
 
-This version provides a baseline, the result of running
-`npx create-react-app`.
+This version uses React-Redux to maintain the state for single view.
 
 ## create-react-app standard documentation (applies)
 
