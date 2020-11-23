@@ -4,6 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { SET_USER_NAME } from './actionTypes';
 
+/**
+ * UserNameView - This view serves as an example "single-page app" view,
+ * rendered from Redux state.
+ */
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default props => {
   const dispatch = useDispatch();
