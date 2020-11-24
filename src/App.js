@@ -1,11 +1,21 @@
-import './App.css';
+import React from 'react';
 
+import Calendar from './Calendar';
+import MushipanRouter from './MushipanRouter';
 import UserNameForm from './UserNameForm';
 
-function App() {
+import './App.css';
+
+const routes = {
+  calendar: Calendar,
+  userNameForm: UserNameForm,
+  default: UserNameForm
+}
+
+const App = () => {
   return (
     <div className="App">
-      <UserNameForm />
+      <MushipanRouter routes={routes} />
     </div>
   );
 }

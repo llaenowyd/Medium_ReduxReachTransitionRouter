@@ -1,2 +1,3 @@
+export const SET_CALENDAR_STYLE = 'SET_CALENDAR_STYLE';
 export const SET_USER_NAME = 'SET_USER_NAME';
 

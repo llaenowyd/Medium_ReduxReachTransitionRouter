@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
-import existingView from "./existingView";
+import calendar from "./calendar";
+import userNameForm from "./userNameForm";
 
-export default combineReducers({ existingView })
+export default combineReducers({ calendar, userNameForm })

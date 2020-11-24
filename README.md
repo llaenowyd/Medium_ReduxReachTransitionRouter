@@ -19,9 +19,13 @@ The versions noted here in this `README.md` file and represented by
 a set of specific, named, non-master branches correspond to the stages
 of development presented in the article.
 
-### This is Version 1
+### This is Version 2
 
-This version uses React-Redux to maintain the state for single view.
+This version provides 2 extremely basic full-page views and routing between
+them, based on the `window.location` provided by the browser runtime, via
+`@reach/router` `useLocation` hook.
+
+At this version, the routing is entirely separate from Redux.
 
 ## create-react-app standard documentation (applies)
 

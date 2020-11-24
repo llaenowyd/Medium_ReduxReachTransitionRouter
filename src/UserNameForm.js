@@ -10,9 +10,9 @@ import { SET_USER_NAME } from './actionTypes';
  */
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default props => {
+export default () => {
   const dispatch = useDispatch();
-  const userName = useSelector(state => state.existingView.userName);
+  const userName = useSelector(state => state.userNameForm.userName);
 
   const inputRef = React.useRef();
 
