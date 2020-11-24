@@ -10,7 +10,7 @@ const routes = {
   calendar: Calendar,
   userNameForm: UserNameForm,
   default: UserNameForm
-}
+};
 
 const App = () => {
   return (
@@ -18,6 +18,6 @@ const App = () => {
       <MushipanRouter routes={routes} />
     </div>
   );
-}
+};
 
 export default App;
