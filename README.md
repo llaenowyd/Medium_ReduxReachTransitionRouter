@@ -19,15 +19,9 @@ The versions noted here in this `README.md` file and represented by
 a set of specific, named, non-master branches correspond to the stages
 of development presented in the article.
 
-### This is Version 3
+### This is Version 4
 
-This version unifies the router and `window.location` with Redux.
-
-As of this version, application code can use the Redux store (exclusively)
-to determine which view to render, and, can dispatch routing
-actions to navigate programmatically. When routing programatically,
-the browser's location is updated and thus its navigation controls
-remain functional.
+React Transition Groups!
 
 ## create-react-app standard documentation (applies)
 

@@ -1,16 +1,30 @@
 import React from 'react';
 
+import { createUseStyles } from 'react-jss';
+
 import { MushipanRouter } from './router';
 import ViewChangingButtons from './ViewChangingButtons';
-import routesConfig from './routes';
+import routesConfig, { useSlideInTransitionGroup } from './routes';
 
-import './App.css';
+const useStyles = createUseStyles({
+  app: {
+    position: 'absolute',
+    overflow: 'hidden',
+    width: '480px',
+    margin: '1em',
+    padding: '1em',
+    backgroundColor: 'lightgrey',
+    border: '1px solid darkgrey',
+  }
+});
 
 const App = () => {
+  const classes = useStyles();
+
   return (
-    <div className="App">
+    <div className={classes.app}>
       <ViewChangingButtons routes={routesConfig} />
-      <MushipanRouter routes={routesConfig} />
+      <MushipanRouter routes={routesConfig} useTransitionGroup={useSlideInTransitionGroup} />
     </div>
   );
 };
