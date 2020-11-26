@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Calendar from './Calendar';
-import MushipanRouter from './MushipanRouter';
+import { MushipanRouter } from './router';
 import UserNameForm from './UserNameForm';
 
 import './App.css';

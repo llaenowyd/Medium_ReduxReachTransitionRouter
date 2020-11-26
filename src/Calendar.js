@@ -46,6 +46,7 @@ export default () => {
             value="default"
             checked={!calendarStyle}
             onClick={setDefaultStyle}
+            readOnly
           />
           <label htmlFor="defaultCalendarStyleRadio" onClick={setDefaultStyle}>default</label>
         </div>
@@ -57,6 +58,7 @@ export default () => {
             value="ISO-8601"
             checked={calendarStyle === 'iso'}
             onClick={setIsoStyle}
+            readOnly
           />
           <label htmlFor="isoCalendarStyleRadio" onClick={setIsoStyle}>ISO-8601</label>
         </div>
