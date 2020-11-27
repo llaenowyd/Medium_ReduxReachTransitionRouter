@@ -1,6 +1,13 @@
 import MushipanRouter from './MushipanRouter';
 
-import { createHistory, getReducer, getHistory, getMiddleware, prepareHistory } from './history';
+import {
+  createHistory,
+  getReducer,
+  getHistory,
+  getMiddleware,
+  prepareHistory,
+  useDispatchRoutes
+} from './history';
 
 export {
   MushipanRouter,
@@ -8,5 +15,6 @@ export {
   getHistory,
   getMiddleware,
   getReducer,
-  prepareHistory
+  prepareHistory,
+  useDispatchRoutes
 };

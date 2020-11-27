@@ -1,5 +1,6 @@
+import { useDispatch } from 'react-redux'
 import { createBrowserHistory } from 'history';
-import { createReduxHistoryContext, reachify } from "redux-first-history";
+import { createReduxHistoryContext, push, reachify } from "redux-first-history";
 
 const _history = {
   createReduxHistory: null,
@@ -19,7 +20,7 @@ export const createHistory = () => {
   _history.routerMiddleware = routerMiddleware;
   _history.routerReducer = routerReducer;
 
-  return _history.routerReducer;
+  return [_history.routerReducer, _history.routerMiddleware];
 };
 
 export const prepareHistory = store => {
@@ -30,3 +31,17 @@ export const prepareHistory = store => {
 export const getHistory = () => _history.reachHistory;
 export const getMiddleware = () => _history.routerMiddleware;
 export const getReducer = () => _history.routerReducer;
+
+/**
+ * useDispatchRoutes
+ * @param routes - compatible with parameter to MushipanRouter
+ * @returns {{[routeName: string]: ViewChangingActionDispatcher}}
+ */
+export const useDispatchRoutes = routes => {
+  const dispatch = useDispatch();
+
+  return Object.fromEntries(
+    Object.entries(routes).map(
+      ([routeName, {pathname}]) => [routeName, () => dispatch(push(pathname))]
+    ));
+};

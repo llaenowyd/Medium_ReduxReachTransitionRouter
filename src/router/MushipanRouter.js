@@ -14,12 +14,18 @@ const Impl = ({routes}) => {
   return (<View />);
 };
 
-const MushipanRouter = ({routes}) => (
-  <LocationProvider history={getHistory()}>
+const MushipanRouter = ({routes}) => {
+  const pathnameToView = Object.fromEntries(
+    Object.entries(routes).map(
+      ([, {pathname, view}]) => [pathname, view]
+    ));
+
+ return (
+   <LocationProvider history={getHistory()}>
     <Router>
-      <Impl routes={routes} default />
+      <Impl routes={pathnameToView} default />
     </Router>
-  </LocationProvider>
-);
+  </LocationProvider>);
+}
 
 export default MushipanRouter;

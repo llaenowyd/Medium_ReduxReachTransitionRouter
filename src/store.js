@@ -1,15 +1,16 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 
 import { createRootReducer } from "./reducers";
 
 import { createHistory, prepareHistory } from './router';
 
-const routerReducer = createHistory();
+const [routerReducer, routerMiddleware] = createHistory();
 
 export const store = createStore(
   createRootReducer({
     router: routerReducer
-  })
+  }),
+  applyMiddleware(routerMiddleware)
 );
 
 prepareHistory(store);

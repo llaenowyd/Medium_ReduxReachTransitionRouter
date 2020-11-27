@@ -1,21 +1,16 @@
 import React from 'react';
 
-import Calendar from './Calendar';
 import { MushipanRouter } from './router';
-import UserNameForm from './UserNameForm';
+import ViewChangingButtons from './ViewChangingButtons';
+import routesConfig from './routes';
 
 import './App.css';
-
-const routes = {
-  calendar: Calendar,
-  userNameForm: UserNameForm,
-  default: UserNameForm
-};
 
 const App = () => {
   return (
     <div className="App">
-      <MushipanRouter routes={routes} />
+      <ViewChangingButtons routes={routesConfig} />
+      <MushipanRouter routes={routesConfig} />
     </div>
   );
 };
