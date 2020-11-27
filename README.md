@@ -23,6 +23,8 @@ of development presented in the article.
 
 React Transition Groups!
 
+![Redux-driven slide-in routing in action!](https://user-images.githubusercontent.com/41239783/100486889-0e892100-30d4-11eb-977f-34a274687c23.gif)
+
 ## create-react-app standard documentation (applies)
 
 ### Available Scripts
