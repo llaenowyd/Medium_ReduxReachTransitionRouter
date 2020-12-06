@@ -3,7 +3,7 @@
 ## Redux-Reach-Transition Router Demo App
 
 This project provides code examples for [the related article on Medium](
-https://www.google.com).
+https://llaenowyd.medium.com/a-navigation-enabled-redux-reach-transition-router-5c949e6b7f3e).
 
 The article explains the component's development in an iterative
 storyline, which is tracked in this repository by specifically-named
